@@ -254,7 +254,7 @@ def broadcast():
   <button onclick="start()">Start Ableton</button>
   <button onclick="stop()">Stop Ableton</button>
   <br/><br/>
-<iframe src="https://lftr.biz:6080/vnc.html"     style="width:1280px; height:800px; border:none;"></iframe>
+<iframe src="https://lftr.biz:6080/vnc.html" style="width:1280px; height:800px; border:none;"></iframe>
 
   <script>
     async function start() {
