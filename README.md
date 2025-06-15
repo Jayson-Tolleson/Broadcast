@@ -40,5 +40,49 @@ sudo apt install -y python3 python3-pip xvfb x11vnc wine curl net-tools wmctrl x
 sudo python3 broadcasterwAbleton.py
 '''
 
-INDEX IS VIEWABLE @ HTTPS://your-domain.com
-BROADCASTER IS VIEWABLE @ https://your-domain.com/broadcast
+Starts Flask app with WebSocket signaling
+
+Exposes REST endpoints /start and /stop to control WINE + VNC
+
+Hosts iframe-based homepage (/) and /broadcast interface as well as /watch
+
+####📡 Web Interface Overview
+
+https://your-domain.com/
+A large, embedded page layout that includes:
+
+https://your-domain.com/watch (in 4K iframe)
+
+Embedded YouTube playlist
+
+https://your-domain.com/broadcast
+An advanced broadcaster dashboard:
+
+WebRTC camera + screen sharing
+
+Viewer count updates via Socket.IO
+
+VNC iframe showing desktop streamed by Wine + x11vnc
+
+Buttons to start/stop Wine + VNC processes
+
+🖥️ Running a .exe App via Wine
+When hitting /start, the following happens:
+
+Kills any existing Wine or VNC processes
+
+Starts Xvfb as virtual display :99
+
+Adds xauth cookie so Wine can access Xvfb
+
+Runs winecfg (replace with your own .exe)
+
+Starts x11vnc and websockify to expose the GUI at localhost:6080
+
+To embed a Wine app like Ableton Live:
+wine_proc = subprocess.Popen(["wine", "Ableton.exe"], env=env)
+
+📺 Access VNC Desktop
+The VNC desktop is accessible via:
+
+https://localhost:6080/vnc.html?host=localhost&port=5900
