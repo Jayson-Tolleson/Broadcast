@@ -34,8 +34,8 @@ project/
 
 sudo apt install -y python3 python3-pip xvfb x11vnc wine curl net-tools wmctrl xauth websockify supervisor
 sudo pip3 install flask flask-socketio gevent gevent-websocket flask-cors 
-sudo git clone https://github.com/Jayson-Tolleson/Flask-Broadcast-w-Wine-Vnc.git
-cd Flask-Broadcast-w-Wine-Vnc.git
+sudo git clone https://github.com/Jayson-Tolleson/Broadcast.git
+cd Broadcast
 
 
 #### 2. Run the Server
