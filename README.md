@@ -43,7 +43,7 @@ cd Flask-Broadcast-w-Wine-Vnc.git
 
 #### 2. Run the Server
 
-sudo python3 broadcasterwableton.py
+sudo python3 broadcasterwAbleton.py
 
 INDEX IS VIEWABLE @ HTTPS://your-domain.com
 BROADCASTER IS VIEWABLE @ https://your-domain.com/broadcast
