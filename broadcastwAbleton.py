@@ -265,12 +265,6 @@ def broadcast():
       await fetch('https://localhost/stop');
       alert('Stopped WINE + VNC server');
     }
-  </script>
-</body>
-</html>
-
-<script>
-'use strict';
 
 const videoInput = document.getElementById('videoInput');
 const cameraSelect = document.getElementById('cameraSelect');
